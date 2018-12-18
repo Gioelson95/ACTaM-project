@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <title>Doog synth</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/note.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/dog_paw.ico" />
+</head>
+
+<body>
+    <div class="window">
+        <div class="container">
+            <div class="upperPart">
+                <div class="oscillators">
+                    <div class="knobContainer">
+
+                        <p class="label" id="oscillator1Label">Oscillator-1</p>
+
+                        <p class="label" id="rangeOsc1Label">range</p>
+                        <div class="knobIndicators" id="knobIndicatorsOsc1Range"></div>
+                        <div id="rangeOsc1Knob" class="knobExt" onmouseenter="rotateKnob(this,'range')">
+                            <div class="knobDiscrete">
+                            </div>
+                        </div>
+
+                        <p class="label" id="waveformOsc1Label">waveform</p>
+                        <div class="knobIndicators" id="knobIndicatorOsc1Waveform"></div>
+                        <div id="waveformOsc1Knob" class="knobExt" onmouseenter="rotateKnob(this,'waveform')">
+                            <div class="knobDiscrete">
+                            </div>
+                        </div>
+
+                        <p class="label" id="oscillator2Label">Oscillator-2</p>
+
+                        <p class="label" id="rangeOsc2Label">range</p>
+                        <div class="knobIndicators" id="knobIndicatorsOsc2Range"></div>
+                        <div id="rangeOsc2Knob" class="knobExt" onmouseenter="rotateKnob(this,'range')">
+                            <div class="knobDiscrete">
+                            </div>
+                        </div>
+
+                        <p class="label" id="freqOsc2Label">frequency</p>
+                        <div class="knobIndicators" id="knobIndicatorsOsc2Freq"></div>
+                        <div id="freqOsc2Knob" class="knobExt" onmouseenter="rotateKnob(this,'frequency')">
+                            <div class="knob">
+                            </div>
+                        </div>
+
+                        <p class="label" id="waveformOsc2Label">waveform</p>
+                        <div class="knobIndicators" id="knobIndicatorOsc2Waveform"></div>
+                        <div id="waveformOsc2Knob" class="knobExt" onmouseenter="rotateKnob(this,'waveform')">
+                            <div class="knobDiscrete">
+                            </div>
+                        </div>
+
+                        <p class="label" id="oscillator3Label">Oscillator-3</p>
+
+                        <p class="label" id="rangeOsc3Label">range</p>
+                        <div class="knobIndicators" id="knobIndicatorsOsc3Range"></div>
+                        <div id="rangeOsc3Knob" class="knobExt" onmouseenter="rotateKnob(this,'range')">
+                            <div class="knobDiscrete">
+                            </div>
+                        </div>
+
+                        <p class="label" id="freqOsc3Label">frequency</p>
+                        <div class="knobIndicators" id="knobIndicatorsOsc3Freq"></div>
+                        <div id="freqOsc3Knob" class="knobExt" onmouseenter="rotateKnob(this,'frequency')">
+                            <div class="knob">
+                            </div>
+                        </div>
+
+                        <p class="label" id="waveformOsc3Label">waveform</p>
+                        <div class="knobIndicators" id="knobIndicatorOsc3Waveform"></div>
+                        <div id="waveformOsc3Knob" class="knobExt" onmouseenter="rotateKnob(this,'waveform')">
+                            <div class="knobDiscrete">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="name">
+                        <p class="groupName">oscillator bank</p>
+                    </div>
+                </div>
+                <div class="mixer">
+                    <div class="knobContainer">
+
+                        <p class="label" id="volumeOscLabel">volume</p>
+
+                        <div class="knobIndicators" id="knobIndicatorsOsc1Volume"></div>
+                        <div id="volumeOsc1Knob" class="knobExt" onmouseenter="rotateKnob(this,'cont')">
+                            <div class="knob">
+                            </div>
+                        </div>
+
+                        <div id="osc1VolumeButton" class="buttonBlueOn" onclick="clickOscButton(this)">
+                        </div>
+                        <p class="label" id="osc1VolumeLabelOn">On</p>
+
+                        <div class="knobIndicators" id="knobIndicatorsOsc2Volume"></div>
+                        <div id="volumeOsc2Knob" class="knobExt" onmouseenter="rotateKnob(this,'cont')">
+                            <div class="knob">
+                            </div>
+                        </div>
+
+                        <div id="osc2VolumeButton" class="buttonBlueOn" onclick="clickOscButton(this)">
+                        </div>
+                        <p class="label" id="osc2VolumeLabelOn">On</p>
+
+                        <div class="knobIndicators" id="knobIndicatorsOsc3Volume"></div>
+                        <div id="volumeOsc3Knob" class="knobExt" onmouseenter="rotateKnob(this,'cont')">
+                            <div class="knob">
+                            </div>
+                        </div>
+
+                        <div id="osc3VolumeButton" class="buttonBlueOff" onclick="clickOscButton(this)">
+                        </div>
+                        <p class="label" id="osc3VolumeLabelOn">On</p>
+
+                        <div class="knobIndicators" id="knobIndicatorsNoiseVolume"></div>
+                        <div id="volumeNoiseKnob" class="knobExt" onmouseenter="rotateKnob(this,'cont')">
+                            <div class="knob">
+                            </div>
+                        </div>
+
+                        <p class="label" id="noiseVolumeLabel">noise</p>
+                        <div id="noiseVolumeButton" class="buttonBlueOff" onclick="clickOscButton(this)">
+                        </div>
+                        <p class="label" id="noiseVolumeLabelOn">On</p>
+
+                        <div id="noiseTypeButton" class="buttonBlueVerticalOff" onclick="changeNoiseType(this)">
+                        </div>
+                        <p class="label" id="noiseWhiteLabel">white</p>
+                        <p class="label" id="noisePinkLabel">pink</p>
+
+                        <div class="whiteLineHorizontal" id="osc1VolumeLine"></div>
+
+                        <div class="whiteLineHorizontal" id="osc2VolumeLine"></div>
+
+                        <div class="whiteLineHorizontal" id="osc3VolumeLine"></div>
+
+                        <div class="whiteLineHorizontal" id="noiseVolumeLine"></div>
+
+                        <div class="whiteLineHorizontal" id="noiseTypeLine"></div>
+
+
+
+                    </div>
+                    <div class="name">
+                        <p class="groupName">mixer</p>
+                    </div>
+                </div>
+                <div class="effects">
+                    <div class="knobContainer">
+
+                        <p class="label" id="tremoloLabel">tremolo</p>
+
+                        <div id="tremoloButton" class="buttonRedOff" onclick="clickTremolo()">
+                        </div>
+                        <p class="label" id="tremoloLabelOn">On</p>
+
+                        <p class="label" id="rateTremoloLabel">rate</p>
+                        <div class="knobIndicators" id="knobIndicatorsTremoloRate"></div>
+                        <div id="rateTremoloKnob" class="knobExt" onmouseenter="rotateKnob(this,'cont')">
+                            <div class="knob">
+                            </div>
+                        </div>
+
+                        <p class="label" id="depthTremoloLabel">depth</p>
+                        <div class="knobIndicators" id="knobIndicatorsTremoloDepth"></div>
+                        <div id="depthTremoloKnob" class="knobExt" onmouseenter="rotateKnob(this,'cont')">
+                            <div class="knob">
+                            </div>
+                        </div>
+
+                        <p class="label" id="waveformTremoloLabel">Waveform</p>
+                        <div class="knobIndicators" id="knobIndicatorTremoloWaveform"></div>
+                        <div id="waveformTremoloKnob" class="knobExt" onmouseenter="rotateKnob(this,'waveform')">
+                            <div class="knobDiscrete">
+                            </div>
+                        </div>
+
+
+                        <p class="label" id="delayLabel">delay</p>
+
+                        <div id="delayButton" class="buttonRedOff" onclick="clickDelay()">
+                        </div>
+                        <p class="label" id="delayLabelOn">On</p>
+
+                        <p class="label" id="timeDelayLabel">time</p>
+                        <div class="knobIndicators" id="knobIndicatorsDelayTime"></div>
+                        <div id="timeDelayKnob" class="knobExt" onmouseenter="rotateKnob(this,'cont')">
+                            <div class="knob">
+                            </div>
+                        </div>
+
+                        <p class="label" id="feedbackDelayLabel">feedback</p>
+                        <div class="knobIndicators" id="knobIndicatorsDelayFeedback"></div>
+                        <div id="feedbackDelayKnob" class="knobExt" onmouseenter="rotateKnob(this,'cont')">
+                            <div class="knob">
+                            </div>
+                        </div>
+
+                        <p class="label" id="levelDelayLabel">level</p>
+                        <div class="knobIndicators" id="knobIndicatorDelayLevel"></div>
+                        <div id="levelDelayKnob" class="knobExt" onmouseenter="rotateKnob(this,'cont')">
+                            <div class="knob">
+                            </div>
+                        </div>
+
+                        <div class="whiteLineHorizontal" id="effectsWhiteLine"></div>
+
+                        <p class="label" id="envelopeLabel">envelope</p>
+
+                        <p class="label" id="attackLabel">attack</p>
+                        <div class="knobIndicators" id="knobIndicatorsAttack"></div>
+                        <div id="attackKnob" class="knobExt" onmouseenter="rotateKnob(this,'cont')">
+                            <div class="knob">
+                            </div>
+                        </div>
+
+                        <p class="label" id="decayLabel">decay</p>
+                        <div class="knobIndicators" id="knobIndicatorsDecay"></div>
+                        <div id="decayKnob" class="knobExt" onmouseenter="rotateKnob(this,'cont')">
+                            <div class="knob">
+                            </div>
+                        </div>
+
+                        <p class="label" id="sustainLabel">sustain</p>
+                        <div class="knobIndicators" id="knobIndicatorsSustain"></div>
+                        <div id="sustainKnob" class="knobExt" onmouseenter="rotateKnob(this,'cont')">
+                            <div class="knob">
+                            </div>
+                        </div>
+
+                        <p class="label" id="releaseLabel">release</p>
+                        <div class="knobIndicators" id="knobIndicatorRelease"></div>
+                        <div id="releaseKnob" class="knobExt" onmouseenter="rotateKnob(this,'cont')">
+                            <div class="knob">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="name">
+                        <p class="groupName">effects</p>
+                    </div>
+                </div>
+                <div class="output">
+
+                    <div class="knobContainer">
+                        <p class="label" id="generalVolumeLabel">volume</p>
+                        <div class="knobIndicators" id="knobIndicatorsVolumeGeneral"></div>
+                        <div id="volumeKnob" class="knobExt" onmouseenter="rotateKnob(this,'cont')">
+                            <div class="knob">
+                            </div>
+                        </div>
+                        <p class="label" id="A440Label">A-440</p>
+                        <div id="buttonA440" class="buttonRedOff" onclick="clickA440()">
+                        </div>
+                        <p class="label" id="A440LabelOn">On</p>
+                        <p class="label" id="jackLabel">phones</p>
+                        <div id="jack"></div>
+                    </div>
+
+                    <div class="name">
+                        <p class="groupName">output</p>
+                    </div>
+                </div>
+                <div class="power">
+                    <div class="knobContainer">
+                        <div id="light"></div>
+                        <p id="labelOn" class="label">on</p>
+                        <div id="onOffButton" class="buttonBlackOff" onclick="turnOnOff()"></div>
+                    </div>
+                    <div class="name">
+                        <p class="groupName">i/o</p>
+                    </div>
+                </div>
+            </div>
+            <div class="logoPart">
+                <div id="settingsButton" onclick="showSettings()"></div>
+                <img id="logo" src="./img/logo_rosso.png">
+            </div>
+            <div class="bottomPart">
+                <div class="pitchModulation">
+
+                    <p class="label" id="tuneLabel">tune</p>
+
+                    <div class="knobIndicators" id="knobIndicatorsTune"></div>
+                    <div id="tuneKnob" class="knobExt" onmouseenter="rotateKnob(this,'tune')">
+                        <div class="knob">
+                        </div>
+                    </div>
+
+                    <p class="label" id="pitchLabel">pitch</p>
+
+
+                    <div id="pitchSliderExt" class="sliderExt" onmouseenter="moveSlider(this)">
+                        <div id="pitchSliderInt" class="sliderInt">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="keyboard">
+                    <div id="2ndOctave">
+                        <div id="f4" class="white" onmousedown="playOscillator('f4')" onmouseup="stopOscillator('f4')" onmouseout="stopOscillator('f4')">
+                            <p class="whiteNoteName"></p>
+                        </div>
+                        <div id="f4Sharp" class="black" onmousedown="playOscillator('f4Sharp')" onmouseup="stopOscillator('f4Sharp')" onmouseout="stopOscillator('f4Sharp')">
+                            <p class="blackNoteName"></p>
+                        </div>
+                        <div id="g4" class="white" onmousedown="playOscillator('g4')" onmouseup="stopOscillator('g4')" onmouseout="stopOscillator('g4')">
+                            <p class="whiteNoteName"></p>
+                        </div>
+                        <div id="g4Sharp" class="black" onmousedown="playOscillator('g4Sharp')" onmouseup="stopOscillator('g4Sharp')" onmouseout="stopOscillator('g4Sharp')">
+                            <p class="blackNoteName"></p>
+                        </div>
+                        <div id="a4" class="white" onmousedown="playOscillator('a4')" onmouseup="stopOscillator('a4')" onmouseout="stopOscillator('a4')">
+                            <p class="whiteNoteName"></p>
+                        </div>
+                        <div id="a4Sharp" class="black" onmousedown="playOscillator('a4Sharp')" onmouseup="stopOscillator('a4Sharp')" onmouseout="stopOscillator('a4Sharp')">
+                            <p class="blackNoteName"></p>
+                        </div>
+                        <div id="b4" class="white" onmousedown="playOscillator('b4')" onmouseup="stopOscillator('b4')" onmouseout="stopOscillator('b4')">
+                            <p class="whiteNoteName"></p>
+                        </div>
+                    </div>
+                    <div id="3rdOctave">
+                        <div id="c5" class="white" onmousedown="playOscillator('c5')" onmouseup="stopOscillator('c5')" onmouseout="stopOscillator('c5')">
+                            <p class="whiteNoteName"></p>
+                        </div>
+                        <div id="c5Sharp" class="black" onmousedown="playOscillator('c5Sharp')" onmouseup="stopOscillator('c5Sharp')" onmouseout="stopOscillator('c5Sharp')">
+                            <p class="blackNoteName"></p>
+                        </div>
+                        <div id="d5" class="white" onmousedown="playOscillator('d5')" onmouseup="stopOscillator('d5')" onmouseout="stopOscillator('d5')">
+                            <p class="whiteNoteName"></p>
+                        </div>
+                        <div id="d5Sharp" class="black" onmousedown="playOscillator('d5Sharp')" onmouseup="stopOscillator('d5Sharp')" onmouseout="stopOscillator('d5Sharp')">
+                            <p class="blackNoteName"></p>
+                        </div>
+                        <div id="e5" class="white" onmousedown="playOscillator('e5')" onmouseup="stopOscillator('e5')" onmouseout="stopOscillator('e5')">
+                            <p class="whiteNoteName"></p>
+                        </div>
+                        <div id="f5" class="white" onmousedown="playOscillator('f5')" onmouseup="stopOscillator('f5')" onmouseout="stopOscillator('f5')">
+                            <p class="whiteNoteName"></p>
+                        </div>
+                        <div id="f5Sharp" class="black" onmousedown="playOscillator('f5Sharp')" onmouseup="stopOscillator('f5Sharp')" onmouseout="stopOscillator('f5Sharp')">
+                            <p class="blackNoteName"></p>
+                        </div>
+                        <div id="g5" class="white" onmousedown="playOscillator('g5')" onmouseup="stopOscillator('g5')" onmouseout="stopOscillator('g5')">
+                            <p class="whiteNoteName"></p>
+                        </div>
+                        <div id="g5Sharp" class="black" onmousedown="playOscillator('g5Sharp')" onmouseup="stopOscillator('g5Sharp')" onmouseout="stopOscillator('g5Sharp')">
+                            <p class="blackNoteName"></p>
+                        </div>
+                        <div id="a5" class="white" onmousedown="playOscillator('a5')" onmouseup="stopOscillator('a5')" onmouseout="stopOscillator('a5')">
+                            <p class="whiteNoteName">A</p>
+                        </div>
+                        <div id="a5Sharp" class="black" onmousedown="playOscillator('a5Sharp')" onmouseup="stopOscillator('a5Sharp')" onmouseout="stopOscillator('a5Sharp')">
+                            <p class="blackNoteName">W</p>
+                        </div>
+                        <div id="b5" class="white" onmousedown="playOscillator('b5')" onmouseup="stopOscillator('b5')" onmouseout="stopOscillator('b5')">
+                            <p class="whiteNoteName">S</p>
+                        </div>
+                    </div>
+                    <div id="4thOctave">
+                        <div id="c6" class="white" onmousedown="playOscillator('c6')" onmouseup="stopOscillator('c6')" onmouseout="stopOscillator('c6')">
+                            <p class="whiteNoteName">D</p>
+                        </div>
+                        <div id="c6Sharp" class="black" onmousedown="playOscillator('c6Sharp')" onmouseup="stopOscillator('c6Sharp')" onmouseout="stopOscillator('c6Sharp')">
+                            <p class="blackNoteName">R</p>
+                        </div>
+                        <div id="d6" class="white" onmousedown="playOscillator('d6')" onmouseup="stopOscillator('d6')" onmouseout="stopOscillator('d6')">
+                            <p class="whiteNoteName">F</p>
+                        </div>
+                        <div id="d6Sharp" class="black" onmousedown="playOscillator('d6Sharp')" onmouseup="stopOscillator('d6Sharp')" onmouseout="stopOscillator('d6Sharp')">
+                            <p class="blackNoteName">T</p>
+                        </div>
+                        <div id="e6" class="white" onmousedown="playOscillator('e6')" onmouseup="stopOscillator('e6')" onmouseout="stopOscillator('e6')">
+                            <p class="whiteNoteName">G</p>
+                        </div>
+                        <div id="f6" class="white" onmousedown="playOscillator('f6')" onmouseup="stopOscillator('f6')" onmouseout="stopOscillator('f6')">
+                            <p class="whiteNoteName">H</p>
+                        </div>
+                        <div id="f6Sharp" class="black" onmousedown="playOscillator('f6Sharp')" onmouseup="stopOscillator('f6Sharp')" onmouseout="stopOscillator('f6Sharp')">
+                            <p class="blackNoteName">U</p>
+                        </div>
+                        <div id="g6" class="white" onmousedown="playOscillator('g6')" onmouseup="stopOscillator('g6')" onmouseout="stopOscillator('g6')">
+                            <p class="whiteNoteName">J</p>
+                        </div>
+                        <div id="g6Sharp" class="black" onmousedown="playOscillator('g6Sharp')" onmouseup="stopOscillator('g6Sharp')" onmouseout="stopOscillator('g6Sharp')">
+                            <p class="blackNoteName">I</p>
+                        </div>
+                        <div id="a6" class="white" onmousedown="playOscillator('a6')" onmouseup="stopOscillator('a6')" onmouseout="stopOscillator('a6')">
+                            <p class="whiteNoteName">K</p>
+                        </div>
+                        <div id="a6Sharp" class="black" onmousedown="playOscillator('a6Sharp')" onmouseup="stopOscillator('a6Sharp')" onmouseout="stopOscillator('a6Sharp')">
+                            <p class="blackNoteName">O</p>
+                        </div>
+                        <div id="b6" class="white" onmousedown="playOscillator('b6')" onmouseup="stopOscillator('b6')" onmouseout="stopOscillator('b6')">
+                            <p class="whiteNoteName">L</p>
+                        </div>
+                    </div>
+                    <div id="5thOctave">
+                        <div id="c7" class="white" onmousedown="playOscillator('c7')" onmouseup="stopOscillator('c7')" onmouseout="stopOscillator('c7')">
+                            <p class="whiteNoteName">ò</p>
+                        </div>
+                        <div id="c7Sharp" class="black" onmousedown="playOscillator('c7Sharp')" onmouseup="stopOscillator('c7Sharp')" onmouseout="stopOscillator('c7Sharp')">
+                            <p class="blackNoteName">è</p>
+                        </div>
+                        <div id="d7" class="white" onmousedown="playOscillator('d7')" onmouseup="stopOscillator('d7')" onmouseout="stopOscillator('d7')">
+                            <p class="whiteNoteName">à</p>
+                        </div>
+                        <div id="d7Sharp" class="black" onmousedown="playOscillator('d7Sharp')" onmouseup="stopOscillator('d7Sharp')" onmouseout="stopOscillator('d7Sharp')">
+                            <p class="blackNoteName">+</p>
+                        </div>
+                        <div id="e7" class="white" onmousedown="playOscillator('e7')" onmouseup="stopOscillator('e7')" onmouseout="stopOscillator('e7')">
+                            <p class="whiteNoteName">ù</p>
+                        </div>
+                        <div id="f7" class="white" onmousedown="playOscillator('f7')" onmouseup="stopOscillator('f7')" onmouseout="stopOscillator('f7')">
+                            <p class="whiteNoteName"></p>
+                        </div>
+                        <div id="f7Sharp" class="black" onmousedown="playOscillator('f7Sharp')" onmouseup="stopOscillator('f7Sharp')" onmouseout="stopOscillator('f7Sharp')">
+                            <p class="blackNoteName"></p>
+                        </div>
+                        <div id="g7" class="white" onmousedown="playOscillator('g7')" onmouseup="stopOscillator('g7')" onmouseout="stopOscillator('g7')">
+                            <p class="whiteNoteName"></p>
+                        </div>
+                        <div id="g7Sharp" class="black" onmousedown="playOscillator('g7Sharp')" onmouseup="stopOscillator('g7Sharp')" onmouseout="stopOscillator('g7Sharp')">
+                            <p class="blackNoteName"></p>
+                        </div>
+                        <div id="a7" class="white" onmousedown="playOscillator('a7')" onmouseup="stopOscillator('a7')" onmouseout="stopOscillator('a7')">
+                            <p class="whiteNoteName"></p>
+                        </div>
+                        <div id="a7Sharp" class="black" onmousedown="playOscillator('a7Sharp')" onmouseup="stopOscillator('a7Sharp')" onmouseout="stopOscillator('a7Sharp')">
+                            <p class="blackNoteName"></p>
+                        </div>
+                        <div id="b7" class="white" onmousedown="playOscillator('b7')" onmouseup="stopOscillator('b7')" onmouseout="stopOscillator('b7')">
+                            <p class="whiteNoteName"></p>
+                        </div>
+
+                    </div>
+                    <div id="6thOctave">
+                        <div id="c8" class="white" onmousedown="playOscillator('c8')" onmouseup="stopOscillator('c8')" onmouseout="stopOscillator('c8')">
+                            <p class="whiteNoteName"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="meter">
+                    <div id="meterLeft">
+                        <div class="ledOffRed" id="light12L"></div>
+                        <div class="ledOffYellow" id="light11L"></div>
+                        <div class="ledOffYellow" id="light10L"></div>
+                        <div class="ledOffYellow" id="light9L"></div>
+                        <div class="ledOffGreen" id="light8L"></div>
+                        <div class="ledOffGreen" id="light7L"></div>
+                        <div class="ledOffGreen" id="light6L"></div>
+                        <div class="ledOffGreen" id="light5L"></div>
+                        <div class="ledOffGreen" id="light4L"></div>
+                        <div class="ledOffGreen" id="light3L"></div>
+                        <div class="ledOffGreen" id="light2L"></div>
+                        <div class="ledOffGreen" id="light1L"></div>
+                    </div>
+
+                    <div id="meterIndicators">
+                        <p class="labelMeter" id="line12Label">clip</p>
+                        <div class="whiteLineHorizontalMeter" id="line11"></div>
+                        <p class="labelMeter" id="line11Label">9</p>
+                        <div class="whiteLineHorizontalMeter" id="line10"></div>
+                        <p class="labelMeter" id="line10Label">6</p>
+                        <div class="whiteLineHorizontalMeter" id="line9"></div>
+                        <p class="labelMeter" id="line9Label">3</p>
+                        <div class="whiteLineHorizontalMeter" id="line8"></div>
+                        <p class="labelMeter" id="line8Label">0</p>
+                        <div class="whiteLineHorizontalMeter" id="line7"></div>
+                        <p class="labelMeter" id="line7Label">3</p>
+                        <div class="whiteLineHorizontalMeter" id="line6"></div>
+                        <p class="labelMeter" id="line6Label">6</p>
+                        <div class="whiteLineHorizontalMeter" id="line5"></div>
+                        <p class="labelMeter" id="line5Label">9</p>
+                        <div class="whiteLineHorizontalMeter" id="line4"></div>
+                        <p class="labelMeter" id="line4Label">12</p>
+                        <div class="whiteLineHorizontalMeter" id="line3"></div>
+                        <p class="labelMeter" id="line3Label">15</p>
+                        <div class="whiteLineHorizontalMeter" id="line2"></div>
+                        <p class="labelMeter" id="line2Label">18</p>
+                        <div class="whiteLineHorizontalMeter" id="line1"></div>
+                        <p class="labelMeter" id="line1Label">21</p>
+
+                    </div>
+
+                    <div id="meterRight">
+                        <div class="ledOffRed" id="light12R"></div>
+                        <div class="ledOffYellow" id="light11R"></div>
+                        <div class="ledOffYellow" id="light10R"></div>
+                        <div class="ledOffYellow" id="light9R"></div>
+                        <div class="ledOffGreen" id="light8R"></div>
+                        <div class="ledOffGreen" id="light7R"></div>
+                        <div class="ledOffGreen" id="light6R"></div>
+                        <div class="ledOffGreen" id="light5R"></div>
+                        <div class="ledOffGreen" id="light4R"></div>
+                        <div class="ledOffGreen" id="light3R"></div>
+                        <div class="ledOffGreen" id="light2R"></div>
+                        <div class="ledOffGreen" id="light1R"></div>
+                    </div>
+                </div>
+
+                <div id="settings">
+                    <div id="presetContainer">
+                        <div class="preset" id="preset1" onclick="changePreset('organ')"></div>
+                        <div class="preset" id="preset2" onclick="changePreset('hammond')"></div>
+                        <div class="preset" id="preset3" onclick="changePreset('subBass')"></div>
+                        <div class="preset" id="preset4" onclick="changePreset('jump')"></div>
+                        <div class="preset" id="preset5" onclick="changePreset('videogame')"></div>
+                        <div class="preset" id="preset6" onclick="changePreset('starWars')"></div>
+                        <div class="preset" id="preset7" onclick="changePreset('ufo')"></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="js/resume.js"></script>
+<script src="js/maps.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/sound.js"></script>
+<script src="js/preset.js"></script>
+<script src="js/htmlElements.js"></script>
+<script src="js/VUMeter.js"></script>
+<script src="js/MIDI.js"></script>
+
+
+
+</html>

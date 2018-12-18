@@ -1,0 +1,1374 @@
+@import url(https: //fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
+@import url(https: //fonts.googleapis.com/css?family=Squada+One);
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.window {
+    background-color: dimgray;
+    height: 100%;
+}
+
+.container {
+    position: absolute;
+    background-image: url("../img/wood.jpg");
+    background-size: 1200px 700px;
+    width: 1200px;
+    height: 700px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 10px;
+}
+
+.upperPart {
+    background-color: white;
+    width: 1150px;
+    height: 370px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border-radius: 10px;
+}
+
+.knobContainer {
+    height: 315px;
+    position: relative;
+}
+
+.whiteLineHorizontal {
+    border-bottom-width: 2px;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    position: relative;
+}
+
+#effectsWhiteLine {
+    top: 218px;
+}
+
+#osc1VolumeLine {
+    top: 61px;
+    left: 34%;
+    width: 24px;
+}
+
+#osc2VolumeLine {
+    top: 167px;
+    left: 34%;
+    width: 24px;
+}
+
+#osc3VolumeLine {
+    top: 281px;
+    left: 34%;
+    width: 24px;
+}
+
+#noiseVolumeLine {
+    top: 225px;
+    left: 58%;
+    width: 24px;
+}
+
+#noiseTypeLine {
+    top: 165px;
+    left: 80%;
+    width: 22px;
+    transform: translate(-50%) rotate(90deg);
+}
+
+.label {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 500;
+    position: absolute;
+}
+
+#oscillator1Label {
+    font-weight: 900;
+    letter-spacing: 2px;
+    top: -8px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#rangeOsc1Label {
+    top: 7px;
+    left: 20%;
+    transform: translate(-50%);
+}
+
+#waveformOsc1Label {
+    top: 7px;
+    left: 80%;
+    transform: translate(-50%);
+}
+
+#oscillator2Label {
+    font-weight: 900;
+    letter-spacing: 2px;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#rangeOsc2Label {
+    top: 115px;
+    left: 20%;
+    transform: translate(-50%);
+}
+
+#freqOsc2Label {
+    top: 115px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#waveformOsc2Label {
+    top: 115px;
+    left: 80%;
+    transform: translate(-50%);
+}
+
+#oscillator3Label {
+    font-weight: 900;
+    letter-spacing: 2px;
+    top: 215px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#rangeOsc3Label {
+    top: 230px;
+    left: 20%;
+    transform: translate(-50%);
+}
+
+#freqOsc3Label {
+    top: 230px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#waveformOsc3Label {
+    top: 230px;
+    left: 80%;
+    transform: translate(-50%);
+}
+
+#volumeOscLabel {
+    font-weight: 900;
+    letter-spacing: 2px;
+    top: -8px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#noiseVolumeLabel {
+    top: 175px;
+    left: 80%;
+    transform: translate(-50%);
+}
+
+#tremoloLabel {
+    font-weight: 900;
+    letter-spacing: 2px;
+    top: -8px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#rateTremoloLabel {
+    top: 7px;
+    left: 38%;
+    transform: translate(-50%);
+}
+
+#depthTremoloLabel {
+    top: 7px;
+    left: 62%;
+    transform: translate(-50%);
+}
+
+#waveformTremoloLabel {
+    top: 7px;
+    left: 85%;
+    transform: translate(-50%);
+}
+
+#delayLabel {
+    font-weight: 900;
+    letter-spacing: 2px;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#timeDelayLabel {
+    top: 115px;
+    left: 38%;
+    transform: translate(-50%);
+}
+
+#feedbackDelayLabel {
+    top: 115px;
+    left: 62%;
+    transform: translate(-50%);
+}
+
+#levelDelayLabel {
+    top: 115px;
+    left: 85%;
+    transform: translate(-50%);
+}
+
+#envelopeLabel {
+    font-weight: 900;
+    letter-spacing: 2px;
+    top: 215px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#attackLabel {
+    top: 230px;
+    left: 15%;
+    transform: translate(-50%);
+}
+
+#decayLabel {
+    top: 230px;
+    left: 38%;
+    transform: translate(-50%);
+}
+
+#sustainLabel {
+    top: 230px;
+    left: 62%;
+    transform: translate(-50%);
+}
+
+#releaseLabel {
+    top: 230px;
+    left: 85%;
+    transform: translate(-50%);
+}
+
+#generalVolumeLabel {
+    top: 7px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.knobIndicators {
+    position: absolute;
+    z-index: 0;
+    transform: translate(-50%);
+    width: 80px;
+    height: 80px;
+}
+
+#knobIndicatorsOsc1Volume, #knobIndicatorsOsc2Volume, #knobIndicatorsOsc3Volume, #knobIndicatorsNoiseVolume, #knobIndicatorsTremoloRate, #knobIndicatorsTremoloDepth, #knobIndicatorsDelayTime, #knobIndicatorsDelayFeedback, #knobIndicatorDelayLevel, #knobIndicatorsAttack, #knobIndicatorsDecay, #knobIndicatorsSustain, #knobIndicatorRelease, #knobIndicatorsVolumeGeneral {
+    background-image: url(../img/knob_indicators/knob_0-10.png);
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+}
+
+#knobIndicatorsOsc1Range, #knobIndicatorsOsc2Range, #knobIndicatorsOsc3Range {
+    background-image: url(../img/knob_indicators/knob_0-off.png);
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+}
+
+#knobIndicatorsOsc2Freq, #knobIndicatorsOsc3Freq {
+    background-image: url(../img/knob_indicators/knob_7-7.png);
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+}
+
+#knobIndicatorOsc1Waveform, #knobIndicatorOsc2Waveform, #knobIndicatorOsc3Waveform, #knobIndicatorTremoloWaveform {
+    background-image: url(../img/knob_indicators/knob_osc.png);
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+}
+
+#knobIndicatorsOsc1Range {
+    top: 26px;
+    left: 20%;
+}
+
+#knobIndicatorOsc1Waveform {
+    top: 26px;
+    left: 80%;
+}
+
+#knobIndicatorsOsc2Range {
+    top: 134px;
+    left: 20%;
+}
+
+#knobIndicatorsOsc2Freq {
+    top: 134px;
+    left: 50%;
+}
+
+#knobIndicatorOsc2Waveform {
+    top: 134px;
+    left: 80%;
+}
+
+#knobIndicatorsOsc3Range {
+    top: 250px;
+    left: 20%;
+}
+
+#knobIndicatorsOsc3Freq {
+    top: 250px;
+    left: 50%;
+}
+
+#knobIndicatorOsc3Waveform {
+    top: 250px;
+    left: 80%;
+}
+
+#knobIndicatorsOsc1Volume {
+    top: 26px;
+    left: 20%;
+}
+
+#knobIndicatorsOsc2Volume {
+    top: 134px;
+    left: 20%;
+}
+
+#knobIndicatorsOsc3Volume {
+    top: 250px;
+    left: 20%;
+}
+
+#knobIndicatorsNoiseVolume {
+    top: 195px;
+    left: 80%;
+}
+
+#knobIndicatorsTremoloRate {
+    top: 26px;
+    left: 38%;
+}
+
+#knobIndicatorsTremoloDepth {
+    top: 26px;
+    left: 62%;
+}
+
+#knobIndicatorTremoloWaveform {
+    top: 26px;
+    left: 85%;
+}
+
+#knobIndicatorsDelayTime {
+    top: 134px;
+    left: 38%;
+}
+
+#knobIndicatorsDelayFeedback {
+    top: 134px;
+    left: 62%;
+}
+
+#knobIndicatorDelayLevel {
+    top: 134px;
+    left: 85%;
+}
+
+#knobIndicatorsAttack {
+    top: 250px;
+    left: 15%;
+}
+
+#knobIndicatorsDecay {
+    top: 250px;
+    left: 38%;
+}
+
+#knobIndicatorsSustain {
+    top: 250px;
+    left: 62%;
+}
+
+#knobIndicatorRelease {
+    top: 250px;
+    left: 85%;
+}
+
+#knobIndicatorsVolumeGeneral {
+    top: 26px;
+    left: 50%;
+    transform: translate(-50%) rotate(0deg);
+
+}
+
+.knobExt {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    transform: translate(-50%) rotate(0deg);
+}
+
+#rangeOsc1Knob {
+    top: 26px;
+    left: 20%;
+    transform: translate(-50%) rotate(90deg);
+}
+
+#waveformOsc1Knob {
+    top: 26px;
+    left: 80%;
+    transform: translate(-50%) rotate(-90deg);
+
+}
+
+#rangeOsc2Knob {
+    top: 134px;
+    left: 20%;
+    transform: translate(-50%) rotate(90deg);
+}
+
+#freqOsc2Knob {
+    top: 134px;
+    left: 50%;
+}
+
+#waveformOsc2Knob {
+    top: 134px;
+    left: 80%;
+    transform: translate(-50%) rotate(-30deg);
+
+}
+
+#rangeOsc3Knob {
+    top: 250px;
+    left: 20%;
+    transform: translate(-50%) rotate(90deg);
+}
+
+#freqOsc3Knob {
+    top: 250px;
+    left: 50%;
+}
+
+#waveformOsc3Knob {
+    top: 250px;
+    left: 80%;
+    transform: translate(-50%) rotate(30deg);
+
+}
+
+#volumeOsc1Knob {
+    top: 28px;
+    left: 20%;
+    transform: translate(-50%) rotate(135deg);
+}
+
+#volumeOsc2Knob {
+    top: 136px;
+    left: 20%;
+    transform: translate(-50%) rotate(135deg);
+}
+
+
+#volumeOsc3Knob {
+    top: 252px;
+    left: 20%;
+    transform: translate(-50%) rotate(-135deg);
+}
+
+#volumeNoiseKnob {
+    top: 197px;
+    left: 80%;
+    transform: translate(-50%) rotate(-135deg);
+}
+
+#rateTremoloKnob {
+    top: 28px;
+    left: 38%;
+}
+
+#depthTremoloKnob {
+    top: 28px;
+    left: 62%;
+}
+
+#waveformTremoloKnob {
+    top: 26px;
+    left: 85%;
+    transform: translate(-50%) rotate(-90deg);
+}
+
+#timeDelayKnob {
+    top: 136px;
+    left: 38%;
+}
+
+#feedbackDelayKnob {
+    top: 136px;
+    left: 62%;
+}
+
+#levelDelayKnob {
+    top: 136px;
+    left: 85%;
+}
+
+#attackKnob {
+    top: 252px;
+    left: 15%;
+}
+
+#decayKnob {
+    top: 252px;
+    left: 38%;
+}
+
+#sustainKnob {
+    top: 252px;
+    left: 62%;
+}
+
+#releaseKnob {
+    top: 252px;
+    left: 85%;
+}
+
+#volumeKnob {
+    top: 28px;
+    left: 50%;
+    transform: translate(-50%) rotate(135deg);
+}
+
+.knob {
+    position: absolute;
+    background-image: url(../img/knob/knob.png);
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+    height: 60px;
+    width: 60px;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.knobDiscrete {
+    position: absolute;
+    background-image: url(../img/knob/knob_discrete.png);
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+    height: 60px;
+    width: 60px;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.buttonBlueOff {
+    width: 48px;
+    height: 22px;
+    font-size: 0;
+    background-image: url(../img/button/switchBlueOFF.png);
+    background-size: 48px 22px;
+    position: absolute;
+    transform: translate(-50%);
+    cursor: pointer;
+}
+
+.buttonBlueOn {
+    width: 48px;
+    height: 22px;
+    font-size: 0;
+    background-image: url(../img/button/switchBlueON.png);
+    background-size: 48px 22px;
+    position: absolute;
+    transform: translate(-50%);
+    cursor: pointer;
+}
+
+.buttonRedOff {
+    width: 48px;
+    height: 22px;
+    font-size: 0;
+    background-image: url(../img/button/switchRedOFF.png);
+    background-size: 48px 22px;
+    position: absolute;
+    transform: translate(-50%);
+    cursor: pointer;
+}
+
+.buttonRedOn {
+    width: 48px;
+    height: 22px;
+    font-size: 0;
+    background-image: url(../img/button/switchRedON.png);
+    background-size: 48px 22px;
+    position: absolute;
+    transform: translate(-50%);
+    cursor: pointer;
+}
+
+.buttonBlueVerticalOff {
+    width: 48px;
+    height: 22px;
+    font-size: 0;
+    background-image: url(../img/button/switchBlueOFF.png);
+    background-size: 48px 22px;
+    position: absolute;
+    transform: translate(-50%) rotate(90deg);
+}
+
+.buttonBlueVerticalOn {
+    width: 48px;
+    height: 22px;
+    font-size: 0;
+    background-image: url(../img/button/switchBlueON.png);
+    background-size: 48px 22px;
+    position: absolute;
+    transform: translate(-50%) rotate(90deg);
+}
+
+#osc1VolumeButton {
+    top: 52px;
+    left: 50%;
+}
+
+#osc2VolumeButton {
+    top: 160px;
+    left: 50%;
+}
+
+#osc3VolumeButton {
+    top: 275px;
+    left: 50%;
+}
+
+#noiseVolumeButton {
+    top: 220px;
+    left: 50%;
+}
+
+#noiseTypeButton {
+    top: 110px;
+    left: 80%;
+}
+
+#tremoloButton {
+    top: 52px;
+    left: 15%;
+}
+
+#delayButton {
+    top: 160px;
+    left: 15%;
+}
+
+#osc1VolumeLabelOn {
+    top: 69px;
+    left: 58%;
+    transform: translate(-50%);
+}
+
+#osc2VolumeLabelOn {
+    top: 177px;
+    left: 58%;
+    transform: translate(-50%);
+}
+
+#osc3VolumeLabelOn {
+    top: 292px;
+    left: 58%;
+    transform: translate(-50%);
+}
+
+#noiseVolumeLabelOn {
+    top: 237px;
+    left: 58%;
+    transform: translate(-50%);
+}
+
+#noiseWhiteLabel {
+    top: 75px;
+    left: 80%;
+    transform: translate(-50%);
+}
+
+#noisePinkLabel {
+    top: 140px;
+    left: 80%;
+    transform: translate(-50%);
+}
+
+#tremoloLabelOn {
+    top: 69px;
+    left: 20%;
+    transform: translate(-50%);
+}
+
+#delayLabelOn {
+    top: 177px;
+    left: 20%;
+    transform: translate(-50%);
+}
+
+#A440Label {
+    top: 132px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#buttonA440 {
+    top: 160px;
+    left: 50%;
+}
+
+#A440LabelOn {
+    top: 177px;
+    left: 65%;
+    transform: translate(-50%);
+}
+
+#jack {
+    position: absolute;
+    background-image: url(../img/jack.png);
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+    top: 270px;
+    width: 35px;
+    height: 35px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#jackLabel {
+    top: 230px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.name {
+    text-align: center;
+}
+
+.groupName {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.oscillators {
+    background-color: black;
+    width: 300px;
+    height: 370px;
+    float: left;
+    margin-right: 1px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.mixer {
+    background-color: black;
+    width: 302px;
+    height: 370px;
+    float: left;
+    margin-right: 1px;
+    margin-left: 1px;
+}
+
+.effects {
+    background-color: black;
+    width: 380px;
+    height: 370px;
+    float: left;
+    margin-right: 1px;
+    margin-left: 1px;
+}
+
+.output {
+    background-color: black;
+    width: 105px;
+    height: 370px;
+    float: left;
+    margin-right: 1px;
+    margin-left: 1px;
+}
+
+.power {
+    background-color: black;
+    width: 55px;
+    height: 370px;
+    float: left;
+    margin-left: 1px;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#light {
+    background-color: darkred;
+    width: 15px;
+    height: 15px;
+    border-color: gray;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 50%;
+    position: relative;
+    top: 140px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+#labelOn {
+    top: 160px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.buttonBlackOff {
+    width: 15px;
+    height: 30px;
+    background-image: url(../img/button/switchBlackOFF.png);
+    background-repeat: no-repeat;
+    background-size: 15px 30px;
+    cursor: pointer;
+    position: relative;
+    top: 170px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.buttonBlackOn {
+    width: 15px;
+    height: 30px;
+    background-image: url(../img/button/switchBlackON.png);
+    background-repeat: no-repeat;
+    background-size: 15px 30px;
+    cursor: pointer;
+    position: relative;
+    top: 170px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.logoPart {
+    position: relative;
+    width: 1150px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+}
+
+#logo {
+    margin-top: 10px;
+    margin-right: 25px;
+    height: 50px;
+}
+
+.bottomPart {
+    background-color: black;
+    width: 1150px;
+    height: 230px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    position: relative;
+}
+
+.pitchModulation {
+    position: relative;
+    width: 220px;
+    height: 230px;
+    background-color: black;
+    display: inline-block;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#settings {
+    background-color: rgba(92, 92, 92, 0.8);
+    border-radius: 10px;
+    position: absolute;
+    width: 1150px;
+    height: 230px;
+    z-index: 2;
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
+}
+
+#settingsButton {
+    background-image: url(../img/button/settings.png);
+    background-size: 40px 40px;
+    width: 40px;
+    height: 40px;
+    left: 10px;
+    top: 50%;
+    position: absolute;
+    transform: translate(0, -50%);
+    cursor: pointer;
+}
+
+#presetContainer {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 1024px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+}
+
+.preset {
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: inline-block;
+    cursor: pointer;
+}
+
+#preset1 {
+    background-image: url(../img/preset/organ.png);
+    background-size: 100px 100px;
+    left: 0px;
+}
+
+#preset2 {
+    background-image: url(../img/preset/hammond.png);
+    background-size: 100px 100px;
+    left: 50px;
+}
+
+#preset3 {
+    background-image: url(../img/preset/subBass.png);
+    background-size: 100px 100px;
+    left: 100px;
+}
+
+#preset4 {
+    background-image: url(../img/preset/jump.png);
+    background-size: 100px 100px;
+    left: 150px;
+}
+
+#preset5 {
+    background-image: url(../img/preset/videogame.png);
+    background-size: 100px 100px;
+    left: 200px;
+}
+
+#preset6 {
+    background-image: url(../img/preset/starWars.png);
+    background-size: 100px 100px;
+    left: 250px;
+}
+
+#preset7 {
+    background-image: url(../img/preset/ufo.png);
+    background-size: 100px 100px;
+    left: 300px;
+}
+
+#tuneLabel {
+    top: 50px;
+    left: 25%;
+    transform: translate(-50%);
+}
+
+#pitchLabel {
+    top: 176px;
+    left: 55%;
+    transform: translate(-50%);
+}
+
+#knobIndicatorsTune {
+    background-image: url(../img/knob_indicators/knob_tune.png);
+    top: 31%;
+    left: 25%;
+    transform: translate(-50%);
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+}
+
+#tuneKnob {
+    top: 32%;
+    left: 25%;
+    transform: translate(-50%) rotate(0deg);
+}
+
+
+.sliderExt {
+    background-image: url(../img/button/pitchWheelBack.png);
+    background-repeat: no-repeat;
+    background-size: 30px 140px;
+}
+
+.sliderInt {
+    background-image: url(../img/button/pitchWheelController.png);
+    background-repeat: no-repeat;
+    background-size: 24px 20px;
+    background-position: center;
+    cursor: pointer;
+}
+
+#pitchSliderExt {
+    position: relative;
+    left: 55%;
+    top: 50%;
+    width: 30px;
+    height: 140px;
+    transform: translate(-50%, -50%);
+}
+
+#pitchSliderInt {
+    position: relative;
+    left: 50%;
+    top: 30px;
+    width: 48px;
+    height: 80px;
+    transform: translate(-50%);
+    z-index: -1;
+}
+
+
+.meter {
+    position: relative;
+    width: 70px;
+    height: 230px;
+    background-color: black;
+    display: inline-block;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    left: -35px;
+    top: -50px;
+}
+
+#meterLeft {
+    width: 20px;
+    position: relative;
+    left: 0px;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: inline-block;
+}
+
+#meterRight {
+    width: 20px;
+    position: relative;
+    left: 0px;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: inline-block;
+}
+
+#meterIndicators {
+    width: 20px;
+    height: 175px;
+    position: relative;
+    display: inline-block;
+    top: 20px;
+}
+
+.ledOffRed {
+    background-color: darkred;
+    width: 10px;
+    height: 10px;
+    border-color: gray;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 3px;
+}
+
+.ledOffYellow {
+    background-color: #b1b100;
+    width: 10px;
+    height: 10px;
+    border-color: gray;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 3px;
+}
+
+.ledOffGreen {
+    background-color: darkgreen;
+    width: 10px;
+    height: 10px;
+    border-color: gray;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 3px;
+}
+
+.ledOnRed {
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    border-color: darkred;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 3px;
+}
+
+.ledOnYellow {
+    background-color: yellow;
+    width: 10px;
+    height: 10px;
+    border-color: #CCCC00;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 3px;
+}
+
+.ledOnGreen {
+    background-color: greenyellow;
+    width: 10px;
+    height: 10px;
+    border-color: darkgreen;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 3px;
+}
+
+.whiteLineHorizontalMeter {
+    border-bottom-width: 1px;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    position: relative;
+    width: 38px;
+    left: -8px;
+}
+
+.labelMeter {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 500;
+    position: absolute;
+    padding-left: 4px;
+    padding-right: 4px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: black;
+}
+
+#line12 {
+    top: 5px;
+}
+
+#line11 {
+    top: 20px;
+}
+
+#line10 {
+    top: 34px;
+}
+
+#line9 {
+    top: 48px;
+}
+
+#line8 {
+    top: 62px;
+}
+
+#line7 {
+    top: 76px;
+}
+
+#line6 {
+    top: 90px;
+}
+
+#line5 {
+    top: 104px;
+}
+
+#line4 {
+    top: 118px;
+}
+
+#line3 {
+    top: 132px;
+}
+
+#line2 {
+    top: 146px;
+}
+
+#line1 {
+    top: 160px;
+}
+
+
+
+#line12Label {
+    top: -11px;
+}
+
+#line11Label {
+    top: 5px;
+}
+
+#line10Label {
+    top: 19px;
+}
+
+#line9Label {
+    top: 34px;
+}
+
+#line8Label {
+    top: 49px;
+}
+
+#line7Label {
+    top: 64px;
+}
+
+#line6Label {
+    top: 79px;
+}
+
+#line5Label {
+    top: 94px;
+}
+
+#line4Label {
+    top: 109px;
+}
+
+#line3Label {
+    top: 124px;
+}
+
+#line2Label {
+    top: 139px;
+}
+
+#line1Label {
+    top: 154px;
+}
+
+.keyboard {
+    background-color: black;
+    width: 843px;
+    height: 230px;
+    display: inline-block;
+    font-size: 0;
+    position: relative;
+    left: -70px;
+}
+
+.white {
+    background-color: white;
+    width: 30px;
+    height: 225px;
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    display: inline-block;
+    position: absolute;
+    cursor: pointer;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+}
+
+.black {
+    background-color: black;
+    width: 16px;
+    height: 100px;
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    cursor: pointer;
+}
+
+.whiteNoteName {
+    color: gray;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: sans-serif;
+}
+
+.blackNoteName {
+    color: white;
+    font-size: 9px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: sans-serif;
+}
