@@ -130,7 +130,7 @@ In particular we use three bytes of the message:
 2. **NOTE:** the note that has to be played or the control that has to changed (for example pitch wheel, master volume etc...)
 3. **VELOCITY:** the value transmitted, for a note is the force applied to the key (strictly related to the volume of the resulting note played), for other messages is the new value that has to be applied to the specific control.
 
-We used the stanard MIDI control change messages for pitch wheel, sustain and master volume, for the other we otherwise preferred custom messages.
+We used standard MIDI control change messages for pitch wheel, sustain and master volume, while for the other features we otherwise preferred custom messages.
 
 ### Arduino
 
